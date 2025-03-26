@@ -1,0 +1,14 @@
+System check identified 1 issue (0 silenced).
+test_create_industry (app.tests.IndustryViewSetTests)
+Tests creating a new industry object ... ok
+test_delete_industry (app.tests.IndustryViewSetTests)
+Test to see if deleting works ... ok
+test_list_industry (app.tests.IndustryViewSetTests)
+Test to list all the industry in the list ... ok
+test_put_industry (app.tests.IndustryViewSetTests)
+Test to see if put works ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.023s
+
+OK

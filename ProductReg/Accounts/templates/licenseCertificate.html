@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+  <title>Industry List</title>
+<style>
+  .clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+a {
+  text-decoration: underline;
+}
+
+body {
+  position: relative;
+  margin: 0 auto; 
+  color: #001028;
+  background: #FFFFFF; 
+  font-family: Arial, sans-serif; 
+  font-size: 14px; 
+  font-family: Arial;
+}
+
+header {
+  padding: 10px 0;
+  margin-bottom: 20px;
+}
+
+#logo {
+  text-align: center;
+  
+}
+
+#logo img {
+  width: 90px;
+}
+
+h1 {
+  
+  color: #5D6975;
+  font-size: 2.4em;
+  line-height: 1.4em;
+  font-weight: normal;
+  text-align: center;
+  margin: 0 0 20px 0;
+}
+
+#project {
+  float: left;
+}
+
+#project span {
+  color: #5D6975;
+  text-align: right;
+  width: 52px;
+  margin-right: 10px;
+  display: inline-block;
+  font-size: 14px;
+}
+
+#company {
+  float: right;
+  text-align: right;
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-bottom: 20px;
+}
+
+
+
+table th,
+table td {
+  text-align: center;
+}
+
+table th {
+  height:40px;
+  background-color:#3d3935;
+  color: white;
+  border-bottom: 1px solid #C1CED9;
+  white-space: nowrap;        
+  font-weight: normal;
+}
+
+table .service,
+table .desc {
+  text-align: left;
+}
+
+table td {
+ padding-top:5px;
+ padding-bottom:5px;
+  
+}
+
+table tr {
+  border-bottom: 1px solid #C1CED9;
+}
+
+table td.service,
+table td.desc {
+  vertical-align: top;
+}
+
+table td.unit,
+table td.qty,
+table td.total {
+  font-size: 1.2em;
+}
+
+table td.grand {
+  border-top: 1px solid #5D6975;;
+}
+
+#notices .notice {
+  color: #5D6975;
+  font-size: 1.2em;
+}
+.logo{
+    align-items:center;
+    margin-top:10px;
+}
+footer {
+  color: #5D6975;
+  width: 100%;
+  height: 30px;
+  position: absolute;
+  bottom: 0;
+  border-top: 1px solid #C1CED9;
+  padding: 8px 0;
+  text-align: center;
+}
+
+
+  </style>
+</head>
+
+<body>
+  <header class="clearfix">
+    <div id="logo" style="display:flex; justify-content:center; ">
+      {#<img src="static/firstapp/images/logo.png" class="brand-logo" width=60 height=60>#} <!--not working-->
+      {#<img src="static/logo.png" class="brand-logo" height="200px">#} <!--not working-->
+      <img src={{imagePath}} class="brand-logo" width=130 height=130>
+      
+      <h1 class="brand-name">Rwanda Food & Drugs Authority</h1>
+    </div>
+    <h2 style="color:#5D6975; font-size:20px; text-align:center;">License Certificate Of Product</h2>
+    <div id="company" class="clearfix">
+      <p style="text-align:left;">
+          On the basis of the Inspection carried out on <b style="font-weight:bold;">{{ev_date}}</b>, Rwanda Food & Drugs Authority(RFDA) Certify 
+          the product on this certificate complies with food safety surveillance regulations for the production of product Listed below:</p>
+          <p style="text-align :center; font-size:10px;">
+              <b style="text-align :center; font-size:12px; margin-top:10px;color:#5D6975">Name of Manufacturer:    <b style="font-size:12px; margin-top:15px;color:#080304;font-weight:2;margin-left:10px;">{{o}}</b></b></br>
+            </br>
+              <b style="text-align :center; font-size:12px; margin-top:10px;color:#5D6975" >Physical Address:    <b style="font-size:12px; margin-top:15px;color:#080304;font-weight:2;padding-left:10px;">{{add}}</b></b></br></br>
+              <b style="text-align :center; font-size:12px; margin-top:10px;color:#5D6975">Manufacturing:     <b style="font-size:12px; margin-top:15px;color:#080304;font-weight:2;margin-left:5px;">{{br}}</b></b></br></br>
+              <b style="text-align :center; font-size:12px; margin-top:10px;color:#5D6975">Packaging Material:    <b style="font-size:12px; margin-top:15px;color:#080304;font-weight:2;margin-left:5px;">{{pk}}</b></b></br></br>
+              <b style="text-align :center; font-size:12px; margin-top:10px;color:#5D6975">Target User:     <b style="font-size:12px; margin-top:15px;color:#080304;font-weight:2; margin-left:5px;">{{tg}}</b></b></br></br>
+          </p>
+    </div>
+    <div id="project">
+    <p>
+        The Responsability for the quality of the individual batches of the food products manufactured lies manufacturer /applicant
+    </p>
+    <p>
+        This certificate remains valid until <b style="font-size:12px; font-weigth:bold; margin-top:2px;color:#080304">June, 13 2025.</b>
+    </p>
+</div>
+    <br>
+    <br>
+  </header>
+  <h4 style="  align-items:left; margin-top:-50px;">Approved By :</h4>
+  <div id="logo">
+    <h3 style="  align-items:center; margin-top:-30px;">Dr. Emille BEINVENU</h3>
+    <h6 style=" align-items:center; margin-top:-30px;">Director General</h6>
+    {% comment %} <img src={{img}} class="brand-logo" width=80 height=80 style=" align-items:center; margin-top:-10px;"> {% endcomment %}
+    <p><b style="font-weight:bold;">{{ev_date}}</b></p>
+    <div class="f" style="width:60px; margin-left:590px; margin-top:-30px; align-items:right">
+      <img src="media/{{im}}" alt="qr code">
+      </div>
+</div>
+<div class="i" style="display:flex; justify-conent:space-between;">
+    <div class="t" >
+        <b style="font-weight:bold; float:left; font-size:15px; color:#5D6975; margin-top:-100px;">Conditions:</b>
+        <p style=" font-size:13px; color:#5D6975;">1.This certificate certifies the status of the product listed in this certificate </p>
+       <p style="margin-top:-60px;  font-size:13px; color:#5D6975;"> 2.This certificate shall remain valid for a period of 2 years from the date of issue, </br>
+       </p><p style="margin-top:-50px;font-size:13px;color:#5D6975; " >But it can be revoked at anytime the activities</br> And/or product certified herewith are changed or if the site is no 
+       </br> Longer considered to be in compliance with Food safety surveillance regulations.</p>
+    </div> 
+    
+  </div>
+   
+</body>
+
+</html>
